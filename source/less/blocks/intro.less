@@ -1,0 +1,117 @@
+.intro {
+  background: #e5e5e5 url("../img/background/header_back_desktop.jpg") no-repeat top;
+  background-size: cover;
+  padding-top: 185px;
+  min-height: 860px;
+  box-sizing: border-box;
+
+  p {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 170%;
+    letter-spacing: -0.466667px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-resolution: @retina) {
+  .intro {
+    background: #e5e5e5 url("../img/background/header_back_desktopx2.jpg") no-repeat top;
+    background-size: cover;
+  }
+}
+
+
+.intro__wrapper {
+  width: 390px;
+  margin-left: 56%;
+}
+
+.intro__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  letter-spacing: -1.10667px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+a.intro__button {
+  justify-content: space-between;
+
+  &::after {
+    content: url("../img/icons/icon-arrow-down.svg");
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media(max-width: @mid-size) {
+  .intro {
+    background: #e5e5e5 url("../img/background/header_back_tablet.jpg") no-repeat top;
+    background-size: cover;
+    padding-top: 60px;
+    min-height: 344px;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  @media (min-resolution: @retina) {
+    .intro {
+      background: #e5e5e5 url("../img/background/header_back_tabletx2.jpg") no-repeat top;
+      background-size: cover;
+    }
+  }
+
+  .intro__wrapper {
+    width: 390px;
+    margin: 0 auto;
+  }
+
+  .intro__title {
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+  }
+}
+
+@media(max-width: @min-size) {
+  .intro {
+    background: linear-gradient(rgba(0, 0, 0, 0) 235px, #ffffff 235px),
+    #e5e5e5 url("../img/background/header_back_mobile.jpg") no-repeat top right 50%;
+    background-size: cover;
+    padding-top: 80px;
+
+    p {
+      color: #2C2E3F;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+  }
+
+  @media (min-resolution: @retina) {
+    .intro {
+      background: linear-gradient(rgba(0, 0, 0, 0) 235px, #ffffff 235px),
+      #e5e5e5 url("../img/background/header_back_mobilex2.jpg") no-repeat top right 50%;
+      background-size: cover;
+    }
+  }
+
+  .intro__wrapper {
+    width: 90%;
+  }
+
+  .intro__title {
+    font-size: 24px;
+    padding: 0 30px;
+    margin-bottom: 100px;
+    min-height: 72px;
+  }
+}

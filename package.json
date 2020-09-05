@@ -1,8 +1,8 @@
 {
-  "name": "pink",
+  "name": "Europe_travel",
   "version": "17.0.0",
   "private": true,
-  "description": "Проект Pink",
+  "description": "Проект Europe_travel",
   "devDependencies": {
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",

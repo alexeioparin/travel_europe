@@ -1,0 +1,258 @@
+.offer-overview {
+  width: 100%;
+  margin-right: 23%;
+  margin-bottom: 200px;
+}
+
+.offer-overview__countryes {
+  width: 100%;
+  min-height: 50px;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+
+  li {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.415px;
+    color: rgba(44, 46, 63, 0.3);
+  }
+}
+
+.offer-overview__card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer-overview__description {
+  width: 370px;
+
+  p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.466667px;
+    color: rgba(44, 46, 63, 0.7);
+    margin-bottom: 50px;
+  }
+
+  a {
+    width: 252px;
+  }
+}
+
+.offer-overview__description-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.245px;
+  color: #2C2E3F;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 175px;
+    height: 2.92px;
+    background: #FE7865;
+    margin: 20px 0;
+  }
+}
+
+.offer-overview__second-block {
+  position: relative;
+}
+
+.offer-overview__feedback {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #ffffff;
+  right: -250px;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 382px;
+  min-height: 285px;
+  padding: 30px;
+
+  p {
+    margin: 0;
+    margin-bottom: 35px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -0.408333px;
+    color: rgba(44, 46, 63, 0.7);
+  }
+}
+
+.offer-overview__feedback-title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.691667px;
+  color: #2C2E3F;
+  margin: 0;
+
+  &::after {
+    content: "";
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    height: 0.73px;
+    width: 68px;
+    background: #FE7865;
+  }
+}
+
+.offer-overview__user {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", "Open-sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.466667px;
+  color: #2C2E3F;
+
+  &::before {
+    content: url(../img/user_avatar.png);
+    width: 38px;
+    height: 38px;
+    margin-right: 15px;
+  }
+}
+
+.offer-overview__user--albania::before {
+  content: url(../img/user_avatar2.png);
+}
+
+.offer-overview__user--macedonia::before {
+  content: url(../img/user_avatar3.png);
+
+}
+
+.offer-overview__user--montenegro::before {
+  content: url(../img/user_avatar4.png);
+}
+
+.offer-overview__user--croatia::before {
+  content: url(../img/user_avatar5.png);
+}
+
+@media (max-width: @mid-size) {
+  .offer-overview {
+    margin-right: 0;
+    margin-bottom: 110px;
+  }
+
+  .offer-overview__countryes {
+    width: 900;
+    margin-left: 37px;
+    margin-bottom: 30px;
+
+    li {
+      margin: 0 50px;
+    }
+
+    li:first-child {
+      margin-left: 0;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .offer-overview__card {
+    display: block;
+    text-align: center;
+  }
+
+  .offer-overview__description {
+    margin: 0 auto;
+    width: 96%;
+    padding-bottom: 30px;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .offer-overview__description-title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    color: #2C2E3F;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .offer-overview__second-block img {
+    width: 100%;
+  }
+
+  .offer-overview__feedback {
+    right: 50%;
+    bottom: -30px;
+    transform: translate(50%);
+    text-align: left;
+  }
+}
+
+@media (max-width: @min-size) {
+  .offer-overview__countryes {
+    margin-bottom: 25px;
+    margin-left: 15px;
+  }
+
+  .offer-overview__description {
+    width: 90%;
+  }
+
+  .offer-overview__description-title {
+    font-size: 24px;
+  }
+
+  a.offer-overview__button {
+    width: 288px;
+  }
+
+  .offer-overview__feedback {
+    width: 268px;
+    bottom: -55px;
+    text-align: center;
+    padding: 30px 20px;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .offer-overview__feedback-title {
+    font-size: 20px;
+    line-height: 24px;
+
+    &::after {
+      margin: 10px auto;
+    }
+  }
+
+  .offer-overview__user {
+    flex-direction: column;
+
+    &::before {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

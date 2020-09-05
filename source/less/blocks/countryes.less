@@ -1,0 +1,152 @@
+.countryes {
+  padding-top: 200px;
+  width: 100%;
+
+  p {
+    width: 330px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.466667px;
+    color: rgba(44, 46, 63, 0.7);
+    margin: 0;
+    margin-bottom: 55px;
+  }
+}
+
+.countryes__title {
+  width: 360px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  letter-spacing: -1.245px;
+  color: #2C2E3F;
+  margin: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 230px;
+    background-color: #FE7865;
+
+    margin: 30px 0;
+  }
+}
+
+.countryes__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.countryes__card {
+  position: relative;
+  width: 30%;
+  height: auto;
+  margin-right: 5%;
+  margin-bottom: 100px;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  span {
+    position: absolute;
+    width: 215px;
+    height: 60px;
+    background: #FFFFFF;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: -0.415px;
+    color: #2C2E3F;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media(max-width: @mid-size) {
+  .countryes {
+    padding-top: 80px;
+    padding-bottom: 75px;
+
+    p {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+  }
+
+  .countryes__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .countryes__card {
+    width: 46%;
+    margin-bottom: 20px;
+
+    &:nth-child(3n) {
+      margin-right: 5%;
+    }
+
+    &:nth-child(2n),
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .countryes__container {
+    padding: 0 5.5%;
+  }
+}
+
+@media(max-width: @min-size) {
+  .countryes {
+    padding-top: 110px;
+    padding-bottom: 40px;
+
+    p {
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .countryes__title {
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+
+  .countryes__container {
+    padding: 0;
+  }
+
+  .countryes__card {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
