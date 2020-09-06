@@ -2,6 +2,7 @@
   width: 100%;
   margin-right: 23%;
   margin-bottom: 200px;
+  padding-right: 1px;
 }
 
 .offer-overview__countryes {
@@ -12,17 +13,36 @@
   margin-bottom: 80px;
   padding: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
 
   li {
+    min-height: 50px;
+    border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  li:first-child {
+    padding-left: 0;
+  }
+
+  li:last-child {
+    padding-right: 0;
+  }
+
+  a {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
     letter-spacing: -0.415px;
     color: rgba(44, 46, 63, 0.3);
+    text-decoration: none;
+  }
+
+  .offer-overview__current-choice {
+    color: #FE7865;
   }
 }
 
@@ -150,23 +170,21 @@
   .offer-overview {
     margin-right: 0;
     margin-bottom: 110px;
+    text-align: center;
   }
 
   .offer-overview__countryes {
-    width: 900;
-    margin-left: 37px;
+    padding-left: calc((100% - 750px)/10 + 37px);
     margin-bottom: 30px;
 
     li {
-      margin: 0 50px;
+      padding: 0 50px;
     }
+  }
 
-    li:first-child {
-      margin-left: 0;
-    }
-
-    li:last-child {
-      margin-right: 0;
+  @media (min-width: 1020px) {
+    .offer-overview__countryes {
+      padding-left: calc((100% - 950px)/2 + 37px);
     }
   }
 
@@ -212,7 +230,11 @@
 @media (max-width: @min-size) {
   .offer-overview__countryes {
     margin-bottom: 25px;
-    margin-left: 15px;
+    padding-left: calc((200% - 640px)/5 + 15px);
+
+    li {
+      padding: 0 calc(50px + 4%);
+    }
   }
 
   .offer-overview__description {

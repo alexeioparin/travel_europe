@@ -17,10 +17,10 @@
         </a>
         <ul class="index-header__menu">
           <li>
-            <a href="#" class="index-header__link index-header__link--about">О путешествии</a>
+            <a href="#coutryes_list" class="index-header__link index-header__link--about">О путешествии</a>
           </li>
           <li>
-            <a href="#" class="index-header__link index-header__link--arrow">
+            <a href="#price" class="index-header__link index-header__link--arrow">
               <span>
                 Цены
               </span>
@@ -49,35 +49,35 @@
           <h2 class="countryes__title">Места посещения</h2>
           <p>Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
           <div class="countryes__container">
-            <a href="#" class="countryes__card">
+            <a href="#coutryes_list" class="countryes__card">
               <picture>
                 <source media="(max-width:1919px)" srcset="img/content/greece.jpg 1x, img/content/greecex2.jpg 2x">
                 <img src="img/content/greece_desktop.jpg" alt="Вид Греции" srcset="img/content/greece_desktopx2.jpg 2x">
               </picture>
               <span>Греция</span>
             </a>
-            <a href="#" class="countryes__card">
+            <a href="#coutryes_list" class="countryes__card">
               <picture>
                 <source media="(max-width:1919px)" srcset="img/content/albania.jpg 1x, img/content/albaniax2.jpg 2x">
                 <img src="img/content/albania_desktop.jpg" alt="Вид Албании" srcset="img/content/albania_desktopx2.jpg 2x">
               </picture>
               <span>Албания</span>
             </a>
-            <a href="#" class="countryes__card">
+            <a href="#coutryes_list" class="countryes__card">
               <picture>
                 <source media="(max-width:1919px)" srcset="img/content/macedonia.jpg">
                 <img src="img/content/macedonia_desktop.jpg" alt="Вид Македонии">
               </picture>
               <span>Македония</span>
             </a>
-            <a href="#" class="countryes__card">
+            <a href="#coutryes_list" class="countryes__card">
               <picture>
                 <source media="(max-width:1919px)" srcset="img/content/montenegro.jpg">
                 <img src="img/content/montenegro_desktop.jpg" alt="Вид Черногории">
               </picture>
               <span>Черногория</span>
             </a>
-            <a href="#" class="countryes__card">
+            <a href="#coutryes_list" class="countryes__card">
               <picture>
                 <source media="(max-width:1919px)" srcset="img/content/croatia.jpg">
                 <img src="img/content/croatia_desktop.jpg" alt="Вид Хорватии">
@@ -88,13 +88,23 @@
         </section>
       </div>
       <div class="wrapper index-main__wrapper-offer-overview">
-        <section class="offer-overview">
+        <section class="offer-overview" id="coutryes_list">
           <ul class="offer-overview__countryes">
-            <li>Греция</li>
-            <li>Албания</li>
-            <li>Македония</li>
-            <li>Черногория</li>
-            <li>Хорватия</li>
+            <li>
+              <a href="#!" class="offer-overview__current-choice">Греция</a>
+            </li>
+            <li>
+              <a href="#!">Албания</a>
+            </li>
+            <li>
+              <a href="#!">Македония</a>
+            </li>
+            <li>
+              <a href="#!">Черногория</a>
+            </li>
+            <li>
+              <a href="#!">Хорватия</a>
+            </li>
           </ul>
           <article class="offer-overview__card">
             <div class="offer-overview__description">
@@ -145,7 +155,11 @@
               <a href="#!" class="offer-overview__button button">купить тур сейчас</a>
             </div>
             <div class="offer-overview__second-block">
-              <img src="img/content/macedonia_desktop_overview.jpg" alt="Вид Македония" width="430" height="596">
+              <picture>
+                <source media="(max-width:767px)" srcset="img/content/macedonia_mobile_overview.jpg 1x, img/content/macedonia_mobile_overviewx2.jpg 2x">
+                <source media="(max-width:1919px)" srcset="img/content/macedonia_tablet_overview.jpg 1x, img/content/macedonia_tablet_overviewx2.jpg 2x">
+                <img src="img/content/macedonia_desktop_overview.jpg" alt="Вид Македонии" width="430" height="596" srcset="img/content/macedonia_desktop_overviewx2.jpg 2x">
+              </picture>
               <div class="offer-overview__feedback">
                 <h3 class="offer-overview__feedback-title">Отзывы</h3>
                 <p>Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
@@ -162,7 +176,11 @@
               <a href="#!" class="offer-overview__button button">купить тур сейчас</a>
             </div>
             <div class="offer-overview__second-block">
-              <img src="img/content/montenegro_desktop_overview.jpg" alt="Вид Черногории" width="430" height="596">
+              <picture>
+                <source media="(max-width:767px)" srcset="img/content/montenegro_mobile_overview.jpg 1x, img/content/montenegro_mobile_overviewx2.jpg 2x">
+                <source media="(max-width:1919px)" srcset="img/content/montenegro_tablet_overview.jpg 1x, img/content/montenegro_tablet_overviewx2.jpg 2x">
+                <img src="img/content/montenegro_desktop_overview.jpg" alt="Вид Черногории" width="430" height="596" srcset="img/content/montenegro_desktop_overviewx2.jpg 2x">
+              </picture>
               <div class="offer-overview__feedback">
                 <h3 class="offer-overview__feedback-title">Отзывы</h3>
                 <p>Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
@@ -179,7 +197,11 @@
               <a href="#!" class="offer-overview__button button">купить тур сейчас</a>
             </div>
             <div class="offer-overview__second-block">
-              <img src="img/content/croatia_desktop_overview.jpg" alt="Вид Хорватии" width="430" height="596">
+              <picture>
+                <source media="(max-width:767px)" srcset="img/content/croatia_mobile_overview.jpg 1x, img/content/croatia_mobile_overviewx2.jpg 2x">
+                <source media="(max-width:1919px)" srcset="img/content/croatia_tablet_overview.jpg 1x, img/content/croatia_tablet_overviewx2.jpg 2x">
+                <img src="img/content/croatia_desktop_overview.jpg" alt="Вид Хорватии" width="430" height="596" srcset="img/content/croatia_desktop_overviewx2.jpg 2x">
+              </picture>
               <div class="offer-overview__feedback">
                 <h3 class="offer-overview__feedback-title">Отзывы</h3>
                 <p>Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
@@ -192,7 +214,7 @@
         </section>
       </div>
       <div class="wrapper index-main__wrapper-price">
-        <section class="price">
+        <section class="price" id="price">
           <article class="price__item">
             <div class="price__item-wrapper">
               <h3>Комплексный <strong>$1999</strong></h3>

@@ -71,6 +71,31 @@
     left: 50%;
     transform: translate(-50%);
   }
+
+  &:hover img {
+    filter: brightness(0.5);
+    transition: 0.4s;
+  }
+
+  &:hover::after {
+    content: "смотреть подробнее";
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 30px 25px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 266px;
+    transition: 0.4s;
+  }
 }
 
 @media(max-width: @mid-size) {
@@ -147,6 +172,10 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
 }

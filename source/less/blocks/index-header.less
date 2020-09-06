@@ -87,6 +87,7 @@
   }
 
   .index-header__menu-button {
+    position: relative;
     width: 72px;
     height: 50px;
     margin: 0;
@@ -98,12 +99,33 @@
 
     &::after {
       content: "";
-      dislay: block;
+      display: block;
       height: 1.5px;
       width: 23px;
       background-color: #ffffff;
       box-shadow: 0px 6px 0px 0px #ffffff,
       0px -6px 0px 0px #ffffff;
+    }
+  }
+
+  .index-header__menu-button--opened {
+    background-color: inherit;
+
+    &::after {
+      background-color: #E5E5E5;
+      box-shadow: none;
+      width: 30px;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #E5E5E5;
+      display: block;
+      height: 1.5px;
+      width: 30px;
+      transform: rotate(-45deg);
     }
   }
 
