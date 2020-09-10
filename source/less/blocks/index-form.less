@@ -4,13 +4,14 @@
   min-height: 455px;
   width: 100%;
   margin-bottom: 170px;
+  margin-left: 10px;
   position: relative;
 }
 
 @media (min-resolution: @retina) {
   .index-form {
     background: url("../img/background/bottom_back_desktopx2.jpg") no-repeat;
-    background-size: 68%;
+    background-size: 73%;
   }
 }
 
@@ -18,11 +19,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 656px;
+  width: 47%;
   background: #FFFFFF;
   box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
   border-radius: 5px;
-  width: 56%;
   margin-left: auto;
   margin-top: 70px;
   padding: 50px;
@@ -46,22 +46,14 @@
     text-align: center;
     color: #141517;
     margin: 0;
-    margin-bottom: 25px;
     position: relative;
     cursor: pointer;
+    z-index: 3;
   }
 
-  label::after {
-    content: "*";
-    color: #FE7865;
-    font-size: 17px;
-    position: absolute;
-    left: 12px;
-    bottom: -55px;
-  }
-
+  input[type="tel"],
   input[type="text"] {
-    width: 47%;
+    width: 100%;
     min-height: 50px;
     box-sizing: border-box;
     border: 1px solid rgba(44, 46, 63, 0.3);
@@ -71,6 +63,7 @@
     color: #141517;
     padding: 15px;
     margin-bottom: 25px;
+    margin-top: 25px;
   }
 
   input[type="submit"] {
@@ -87,8 +80,38 @@
   }
 
   input.index-form__required {
-    padding-left: 25px;
+    padding-left: 50px;
   }
+
+  input.index-form__error {
+    border: 1px solid #FE7865;
+  }
+}
+
+.index-form__container-tel,
+.index-form__container-mail {
+  width: 47%;
+  position: relative;
+}
+
+.index-form__mark::before {
+  content: "*";
+  color: #FE7865;
+  font-size: 17px;
+  position: absolute;
+  left: 12px;
+  bottom: -52px;
+}
+
+.index-form__mark::after {
+  content: "+7";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #141517;
+  position: absolute;
+  left: 22px;
+  bottom: -58px;
 }
 
 .index-form__wrapper input::placeholder {
@@ -103,10 +126,66 @@
   color: rgba(0, 0, 0, 0);
 }
 
+.index-form__success {
+  position: fixed;
+  margin: 0 auto;
+  top: 10px;
+  left: 50%;
+  height: 30%;
+  width: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5);
+  background-color: #FBF8F8;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 170%;
+  text-align: center;
+  color: #48494D;
+  padding: 100px 165px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.index-form__success-button {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  top: 20px;
+  right: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 1.5px;
+    background-color: rgba(20, 21, 23, 0.2);
+    transform: rotate(45deg);
+    left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 1.5px;
+    background-color: rgba(20, 21, 23, 0.2);
+    transform: rotate(-45deg);
+    left: 0;
+  }
+}
+
 @media (max-width: @mid-size) {
   .index-form {
     background: url("../img/background/bottom_back.jpg") no-repeat;
     background-size: 100%;
+    margin-left: 0;
+    margin-bottom: 80px;
   }
 
   @media (min-resolution: @retina) {
@@ -121,6 +200,11 @@
     width: 85.7%;
     box-sizing: border-box;
 
+    input[type="tel"],
+    input[type="text"] {
+      margin-bottom: 20px;
+    }
+
     input[type="submit"] {
       width: 250px;
       font-weight: 500;
@@ -128,12 +212,17 @@
       line-height: 12px;
     }
   }
+
+  .index-form__container-tel,
+  .index-form__container-mail {
+    width: 48%;
+  }
 }
 
 @media (max-width: @min-size) {
   .index-form {
     background-image: none;
-    margin-bottom: 70px;
+    margin-bottom: 55px;
   }
 
   .index-form__wrapper {
@@ -142,15 +231,21 @@
     box-shadow: none;
     border-radius: 0;
     margin-top: 0;
-    padding: 50px 16px;
+    padding: 45px 16px;
 
     h3 {
       margin-bottom: 20px;
     }
 
+    input[type="tel"],
     input[type="text"] {
       display: block;
       width: 100%;
+      margin-top: 20px;
+    }
+
+    input[type="tel"] {
+      margin-bottom: 0;
     }
 
     input[type="submit"] {
@@ -161,5 +256,25 @@
       line-height: 12px;
       letter-spacing: 2px;
     }
+  }
+
+  .index-form__container-tel,
+  .index-form__container-mail {
+    width: 100%;
+  }
+
+  .index-form__mark::before {
+    bottom: -48px;
+  }
+
+  .index-form__mark::after {
+    bottom: -53px;
+  }
+
+  .index-form__success {
+    box-sizing: border-box;
+    width: 300px;
+    height: 50%;
+    padding: 50px 20px;
   }
 }

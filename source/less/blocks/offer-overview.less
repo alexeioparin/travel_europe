@@ -1,13 +1,13 @@
 .offer-overview {
   width: 100%;
+  padding-top: 47px;
   margin-right: 23%;
-  margin-bottom: 200px;
+  margin-bottom: 205px;
   padding-right: 1px;
 }
 
 .offer-overview__countryes {
   width: 100%;
-  min-height: 50px;
   list-style: none;
   margin: 0;
   margin-bottom: 80px;
@@ -16,9 +16,10 @@
   align-items: center;
 
   li {
-    min-height: 50px;
+    min-height: 20px;
     border-bottom: 1px solid rgba(44, 46, 63, 0.3);
     padding: 0 50px;
+    padding-bottom: 15px;
     display: flex;
     align-items: center;
   }
@@ -60,6 +61,7 @@
     line-height: 28px;
     letter-spacing: -0.466667px;
     color: rgba(44, 46, 63, 0.7);
+    margin-top: 30px;
     margin-bottom: 50px;
   }
 
@@ -70,6 +72,7 @@
 
 .offer-overview__description-title {
   margin: 0;
+  margin-top: 10px;
   font-weight: 600;
   font-size: 55px;
   line-height: 90px;
@@ -83,6 +86,7 @@
     height: 2.92px;
     background: #FE7865;
     margin: 20px 0;
+    margin-top: 15px;
   }
 }
 
@@ -94,16 +98,17 @@
   box-sizing: border-box;
   position: absolute;
   background-color: #ffffff;
-  right: -250px;
-  bottom: 50%;
+  right: -270px;
+  bottom: 50.5%;
   transform: translateY(50%);
   width: 382px;
-  min-height: 285px;
+  min-height: 275px;
   padding: 30px;
+  padding-top: 34px;
 
   p {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-weight: normal;
     font-size: 14px;
     line-height: 28px;
@@ -123,7 +128,7 @@
   &::after {
     content: "";
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: block;
     height: 0.73px;
     width: 68px;
@@ -171,14 +176,16 @@
     margin-right: 0;
     margin-bottom: 110px;
     text-align: center;
+    padding-top: 0;
   }
 
   .offer-overview__countryes {
     padding-left: calc((100% - 750px)/10 + 37px);
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     li {
       padding: 0 50px;
+      padding-bottom: 15px;
     }
   }
 
@@ -199,7 +206,9 @@
     padding-bottom: 30px;
 
     p {
+      margin-top: 20px;
       margin-bottom: 20px;
+      padding: 0 5px;
     }
   }
 
@@ -209,6 +218,7 @@
     line-height: 150%;
     text-align: center;
     color: #2C2E3F;
+    letter-spacing: 0;
 
     &::after {
       content: none;
@@ -221,24 +231,40 @@
 
   .offer-overview__feedback {
     right: 50%;
-    bottom: -30px;
+    bottom: -24px;
     transform: translate(50%);
     text-align: left;
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    p {
+      margin-bottom: 35px;
+    }
   }
 }
 
 @media (max-width: @min-size) {
+  .offer-overview {
+    margin-bottom: 102px;
+  }
+
   .offer-overview__countryes {
     margin-bottom: 25px;
     padding-left: calc((200% - 640px)/5 + 15px);
 
     li {
-      padding: 0 calc(50px + 4%);
+      padding: 0 50px;
+      padding-bottom: 15px;
     }
   }
 
   .offer-overview__description {
-    width: 90%;
+    width: 100%;
+    padding-bottom: 50px;
+
+    p {
+      padding: 0 3%;
+    }
   }
 
   .offer-overview__description-title {
@@ -251,7 +277,7 @@
 
   .offer-overview__feedback {
     width: 268px;
-    bottom: -55px;
+    bottom: -60px;
     text-align: center;
     padding: 30px 20px;
 
@@ -266,11 +292,13 @@
 
     &::after {
       margin: 10px auto;
+      margin-bottom: 20px;
     }
   }
 
   .offer-overview__user {
     flex-direction: column;
+    padding-right: 5px;
 
     &::before {
       margin-right: 0;

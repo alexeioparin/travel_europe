@@ -1,0 +1,76 @@
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.error-message-tel {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FE7865;
+  text-align: left;
+  padding-left: 40px;
+  margin-top: 30px;
+  top: -20px;
+}
+
+.error-message-mail {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FE7865;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.error-index-message-tel {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FE7865;
+  text-align: left;
+  margin-top: 30px;
+  top: -20px;
+}
+
+.error-index-message-mail {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FE7865;
+  text-align: left;
+}
+
+@media (max-width: @min-size) {
+  .error-index-message-tel,
+  .error-index-message-mail {
+    height: 20px;
+  }
+
+  .error-message-mail,
+  .error-message-tel {
+    width: 270px;
+    margin: 0 auto;
+  }
+
+  .error-message-tel {
+    margin-top: 30px;
+  }
+}

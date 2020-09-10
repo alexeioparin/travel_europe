@@ -10,7 +10,6 @@
     letter-spacing: -0.466667px;
     color: rgba(44, 46, 63, 0.7);
     margin: 0;
-    margin-bottom: 55px;
   }
 }
 
@@ -31,6 +30,7 @@
     background-color: #FE7865;
 
     margin: 30px 0;
+    margin-top: 28px;
   }
 }
 
@@ -44,12 +44,20 @@
   position: relative;
   width: 30%;
   height: auto;
-  margin-right: 5%;
-  margin-bottom: 100px;
+  margin-top: 55px;
+  margin-bottom: 42px;
   text-align: center;
 
   img {
     width: 100%;
+  }
+
+  &:last-child {
+    margin-left: 5%;
+  }
+
+  &:not(:last-child) {
+    margin-right: 5%;
   }
 
   &:nth-child(3n) {
@@ -59,7 +67,7 @@
   span {
     position: absolute;
     width: 215px;
-    height: 60px;
+    height: 68px;
     background: #FFFFFF;
     font-weight: 500;
     font-size: 24px;
@@ -106,7 +114,7 @@
     p {
       text-align: center;
       margin: 0 auto;
-      margin-bottom: 40px;
+      margin-bottom: 0;
     }
   }
 
@@ -117,6 +125,7 @@
     text-align: center;
     margin: 0 auto;
     margin-bottom: 20px;
+    letter-spacing: 0;
 
     &::after {
       content: none;
@@ -125,7 +134,8 @@
 
   .countryes__card {
     width: 46%;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 17px;
 
     &:nth-child(3n) {
       margin-right: 5%;
@@ -135,17 +145,27 @@
     &:last-child {
       margin-right: 0;
     }
+
+    &:last-child {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    span {
+      bottom: -4px;
+    }
   }
 
   .countryes__container {
-    padding: 0 5.5%;
+    padding: 0 7%;
+    padding-top: 40px;
   }
 }
 
 @media(max-width: @min-size) {
   .countryes {
     padding-top: 110px;
-    padding-bottom: 40px;
+    padding-bottom: 33px;
 
     p {
       width: 100%;
@@ -158,7 +178,7 @@
     font-size: 24px;
     margin: 0 auto;
     margin-bottom: 20px;
-    width: 300px;
+    width: 100%;
   }
 
   .countryes__container {
@@ -168,14 +188,23 @@
   .countryes__card {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 
     &:last-child {
+      margin-top: 0;
       margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 0;
     }
 
     &:nth-child(3n) {
       margin-right: 0;
+    }
+
+    span {
+      bottom: -1px;
     }
   }
 }

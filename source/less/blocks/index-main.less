@@ -1,8 +1,22 @@
-.index-main__wrapper-offer-overview {
-  background: url("../img/background/middle_desktop_back.png") no-repeat 50% 150px;
+.index-main {
+  background: url("../img/background/middle_desktop_back.png") no-repeat 50% 1180px;
+  background-size: cover;
+
+  @media (min-resolution: @retina) {
+    background: url("../img/background/middle_desktop_backx2.png") no-repeat left 50% top 2590px;
+    background-size: 75%;
+  }
+}
+
+.index-main__wrapper-price {
+  background-color: inherit;
 }
 
 @media (max-width: @mid-size) {
+  .index-main {
+    background: none;
+  }
+
   .index-main__wrapper-offer-overview {
     margin: 0;
     background: none;
@@ -10,5 +24,25 @@
 
   .index-main__wrapper-form {
     margin: 0;
+  }
+}
+
+@media (max-width: @min-size) {
+  .index-main__wrapper-countryes {
+    box-sizing: border-box;
+    padding: 0 1.7%;
+  }
+
+  .index-main__wrapper-price {
+    box-sizing: border-box;
+    padding: 0 3px;
+  }
+
+  .index-main__wrapper-offer-overview {
+    width: 100%;
+  }
+
+  .index-main__wrapper-form {
+    width: 100%;
   }
 }

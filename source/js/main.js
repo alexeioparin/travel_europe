@@ -4,10 +4,13 @@ const menuButton = document.querySelector('.index-header__menu-button');
 const headerMenu = document.querySelector('.index-header__menu');
 
 menuButton.classList.remove('index-header__no-js');
-headerMenu.classList.add('visually-hidden');
 
 menuButton.addEventListener('click', function() {
-  headerMenu.classList.toggle('visually-hidden');
+  if (headerMenu.style.display === 'flex') {
+    headerMenu.style.display = 'none';
+  } else {
+    headerMenu.style.display = 'flex';
+  }
   menuButton.classList.toggle('index-header__menu-button--opened');
 })
 
@@ -42,8 +45,7 @@ countryesLinkList.forEach(function(item, i, arr) {
     chooseListItem(countryesHeadList);
     if (document.documentElement.clientWidth < 750) {
       countryesList.style.marginLeft = 0 - i * 180 + 'px';
-    }
-    if (document.documentElement.clientWidth >= 750 && document.documentElement.clientWidth < 1000) {
+    } else if (document.documentElement.clientWidth >= 750 && document.documentElement.clientWidth < 1000) {
       countryesList.style.marginLeft = 0 - i * 52 + 'px';
     }
   })
@@ -60,8 +62,7 @@ countryesHeadList.forEach(function(item, i, arr) {
 window.addEventListener('resize', function() {
   if (document.documentElement.clientWidth >= 1000 ) {
     countryesList.style = '';
-  }
-  else if (document.documentElement.clientWidth < 1000 && currentCountry === 'Хорватия' ) {
+  } else if (document.documentElement.clientWidth < 1000 && currentCountry === 'Хорватия' ) {
     counrtyesCardList.forEach(function(item, i, arr) {
       item.classList.add('visually-hidden');
     })
